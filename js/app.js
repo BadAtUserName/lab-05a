@@ -7,12 +7,13 @@ Write a function called sum() that takes in two numbers as arguments and then re
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
+
 // Write your code here
 function sum(a, b) { //eslint-disable-line
   let mySum = a + b;
   let myStr = `The sum of ${a} and ${b} is ${mySum}.`;
 
-  return[mySum, myStr]; 
+  return[mySum, myStr];
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -55,11 +56,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+  let sumOfAAndBResult = sum(a, b);
+  let valueOfAPlusB = sumOfAAndBResult[0];
+  let sumOfThree = sum(valueOfAPlusB, c)[0];
+  let productOfAAndBResult = multiply(a, b);
+  let productOfAAndB = productOfAAndBResult[0];
+  let productOfthree = multiply(productOfAAndB, c)[0];
+  let sumOfThreeStr = `${a} and ${b} and ${c} sum to ${sumOfThree}.`;
+  let productOfthreeStr = `The product of ${a} and ${b} and ${c} is ${productOfthree}.`;
 
+  return[sumOfThree, productOfthree, sumOfThreeStr, productOfthreeStr];
 }
+//can i just put this here?
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
