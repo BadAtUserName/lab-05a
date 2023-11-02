@@ -67,6 +67,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
 
   return[sumOfThree, productOfthree, sumOfThreeStr, productOfthreeStr];
 }
+//can i just put this here?
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 testSumAndMultiply(4,7,5);
