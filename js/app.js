@@ -87,13 +87,19 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
+function sumArray(testArray) { //eslint-disable-line
+  let sumAB = sum(testArray[0], testArray[1]);
+  let valAB = sumAB[0];
+  let sumThree = sum(valAB, testArray[2])[0];
+  let commaString = testArray.join(',');
+  let sumArrayStr = `${(commaString)} was passed in as an array of numbers, and ${sumThree} is their sum.`;
 
+  //}
+  return [sumThree, sumArrayStr];
 }
-
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -109,7 +115,6 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
